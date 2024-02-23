@@ -78,7 +78,7 @@
 </div>
 
 <section id="why">
-<h2 class="title">Why Freschery</h2>
+<h2 class="title">Why FOOD ORDER</h2>
 <div class="container">
 <div class="row">
 <div class="col-md-4">
@@ -135,71 +135,30 @@
     </div>
 </div>
 
-<div class="col-md-12 mt-5 text-center">
-    <a href="shop.html" class="btn btn-primary btn-lg">SHOP NOW</a>
-</div>
-</div>
-</div>
-</section>
+    <div class="col-md-12 mt-5 text-center">
+        <a href="{{route('products.shop')}}" class="btn btn-primary btn-lg">SHOP NOW</a>
+    </div>
+    </div>
+    </div>
+    </section>
 
-<section id="categories" class="pb-0 gray-bg">
-<h2 class="title">Categories</h2>
-<div class="landing-categories owl-carousel">
-<div class="item">
-<div class="card rounded-0 border-0 text-center">
-    <img src="assets/img/vegetables.jpg">
-    <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <!-- <h4 class="card-title">Vegetables</h4> -->
-        <a href="shop.html" class="btn btn-primary btn-lg">Vegetables</a>
+    <section id="categories" class="pb-0 gray-bg">
+    <h2 class="title">Categories</h2>
+    <div class="landing-categories owl-carousel">
+        @foreach ($categories as $categorie)
+        <div class="item">
+            <div class="card rounded-0 border-0 text-center">
+                <img src="{{asset('assets/img/'.$categorie->image.'')}}">
+                <div class="card-img-overlay d-flex align-items-center justify-content-center">
+                    <!-- <h4 class="card-title">Vegetables</h4> -->
+                    <a href="{{url('products/category/'.$categorie->id)}}" class="btn btn-primary btn-lg">{{$categorie->name}}</a>
+                </div>
+            </div>
+            </div>
+        @endforeach
+    
+    
     </div>
-</div>
-</div>
-<div class="item">
-<div class="card rounded-0 border-0 text-center">
-    <img src="assets/img/fruits.jpg">
-    <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <!-- <h4 class="card-title">Fruits</h4> -->
-        <a href="shop.html" class="btn btn-primary btn-lg">Fruits</a>
+    </section>
     </div>
-</div>
-</div>
-<div class="item">
-<div class="card rounded-0 border-0 text-center">
-    <img src="assets/img/meats.jpg">
-    <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <!-- <h4 class="card-title">Meats</h4> -->
-        <a href="shop.html" class="btn btn-primary btn-lg">Meats</a>
-    </div>
-</div>
-</div>
-<div class="item">
-<div class="card rounded-0 border-0 text-center">
-    <img src="assets/img/fish.jpg">
-    <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <!-- <h4 class="card-title">Fishes</h4> -->
-        <a href="shop.html" class="btn btn-primary btn-lg">Fishes</a>
-    </div>
-</div>
-</div>
-<div class="item">
-<div class="card rounded-0 border-0 text-center">
-    <img src="assets/img/frozen.jpg">
-    <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <!-- <h4 class="card-title">Frozen Foods</h4> -->
-        <a href="shop.html" class="btn btn-primary btn-lg">Frozen Foods</a>
-    </div>
-</div>
-</div>
-<div class="item">
-<div class="card rounded-0 border-0 text-center">
-    <img src="assets/img/package.jpg">
-    <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <!-- <h4 class="card-title">Package</h4> -->
-        <a href="shop.html" class="btn btn-primary btn-lg">Package</a>
-    </div>
-</div>
-</div>
-</div>
-</section>
-</div>
 @endsection
