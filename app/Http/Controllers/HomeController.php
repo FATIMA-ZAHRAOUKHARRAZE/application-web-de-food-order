@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product\Cart;
 use App\Models\Product\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,7 +26,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $categories=Category::select()->orderBy('id','desc')->get();
-        return view('home',compact('categories'));
+        $categories = Category::select()->orderBy('id', 'desc')->get();
+        return view('home', compact('categories'));
     }
+    
 }

@@ -14,6 +14,13 @@
             </div>
         </div>
     </div>
+    <div class="container mt-5">
+    @if (Session::has('success'))
+        <div class="alert alert-success">
+                <p>{{ Session::get('success') }}</p>
+        </div>
+    @endif
+    </div>
     <div class="product-detail">
         <div class="container">
             <div class="row">
@@ -43,16 +50,29 @@
                     <p class="mb-1">
                         <strong>Quantity</strong>
                     </p>
+                    <form action="{{route('products.add.cart')}}" method="post">
+                        @csrf
                     <div class="row">
                         <div class="col-sm-5">
-                            <input class="form-control" type="number" min="1" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="1" name="vertical-spin">
+                            <input name="quantite" class="form-control" type="number" min="1" data-bts-button-down-class="btn btn-primary" data-bts-button-up-class="btn btn-primary" value="1" name="vertical-spin">
                         </div>
                         <div class="col-sm-6"><span class="pt-1 d-inline-block">Pack (1000 gram)</span></div>
                     </div>
-
-                    <button class="mt-3 btn btn-primary btn-lg">
-                        <i class="fa fa-shopping-basket"></i> Add to Cart
-                    </button>
+                  
+                    <input type="hidden" name="name" value="{{$product->name}} ">
+                    <input type="hidden" name="price" value="{{$product->price}} ">
+                    <input type="hidden" name="image" value="{{$product->image}} ">
+                    <input type="hidden" name="pro_id" value="{{$product->id}}">
+                    @if($ceckInCart >0)
+                        <button disabled class="mt-3 btn btn-primary btn-lg">
+                            <i class="fa fa-shopping-basket"></i> Add to Cart
+                        </button>
+                    @else
+                        <button type="submit" name="" class="mt-3 btn btn-primary btn-lg">
+                            <i class="fa fa-shopping-basket"></i> Add to Cart
+                        </button>
+                    @endif
+                    </form>
                 </div>
             </div>
         </div>
@@ -91,8 +111,8 @@
                                     <div class="card-price">
                                         <span class="reguler">{{$relatedProduct->price}} DH</span>
                                     </div>
-                                    <form action="{{route('products.add.cart')}}" method="post"></form>
-                                    <a href="{{route('single.Product',$product->id)}}" class="btn btn-block btn-primary">
+                                   
+                                    <a href="{{route('single.Product',$relatedProduct->id)}}" class="btn btn-block btn-primary">
                                         Add to Cart
                                     </a>
 
@@ -101,7 +121,7 @@
                         </div>
                         @endforeach
                         @else
-                       <p class="alert alert-succes">
+                       <p class="alert alert-success">
                             there are no products in this category just now
                        </p>
                        @endif

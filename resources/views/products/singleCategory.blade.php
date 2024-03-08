@@ -137,7 +137,7 @@
                         @endforeach
                     </div>
                     @else
-                       <p class="alert alert-succes">
+                       <p class="alert alert-success">
                             there are no products in this category just now
                        </p>
                        @endif

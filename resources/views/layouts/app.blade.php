@@ -3,12 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
-   
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
@@ -32,15 +29,13 @@
         <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-transparent" id="page-navigation">
             <div class="container">
                 <!-- Navbar Brand -->
-                <a href="{{ url('/') }}" class="navbar-brand">
+                <a href="{{ url('/home') }}" class="navbar-brand">
                     <img src="{{asset('assets/img/logo/logo.png')}}" alt="">
                 </a>
-
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <!-- Navbar Menu -->
                     <ul class="navbar-nav ml-auto">
@@ -79,8 +74,8 @@
                           </li>
                         @endguest
                         <li class="nav-item">
-                            <a href="cart.html" class="nav-link" data-toggle="" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-shopping-basket"></i> <span class="badge badge-primary">5</span>
+                            <a href="{{route('products.cart')}}" class="nav-link" data-toggle="" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-shopping-basket"></i> <span class="badge badge-primary"></span>
                             </a>
                           
                         </li>

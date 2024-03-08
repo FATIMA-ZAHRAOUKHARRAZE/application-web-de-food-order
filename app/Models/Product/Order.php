@@ -1,22 +1,26 @@
 <?php
 
-namespace App\Models\Product;
+namespace App\Models\product;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cart extends Model
+class Order extends Model
 {
     use HasFactory;
-    protected $table="carts";
     protected $fillable=[
         "name",
-        "image",
-        "quantite",
+        "last_name",
+        "address",
+        "town",
+        "state",
+        "zip_code",
+        "email",
+        "phone_number",
         "price",
-        "pro_id",
         "user_id",
-        "subtotal",
+        "order_note",
+        "status",
         
     ];
     public $timestamps =true;

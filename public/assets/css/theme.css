@@ -344,10 +344,10 @@ section .card-title {
   padding: 3px 10px;
 }
 .product-detail .stock.available {
-  background: #46be8a;
+  background: orange;
 }
 .product-detail .stock.empty {
-  background: #f96868;
+  background: orange;
 }
 .product-detail .price {
   font-size: 1.5rem;
@@ -457,4 +457,4 @@ footer .copyright {
   border-top: 1px solid #eee;
 }
 
-/*# sourceMappingURL=theme.css.map */
+
