@@ -60,7 +60,7 @@
                                 <div class="avatar-header"><img src="{{asset('assets/img/logo/logo.png')}}"></div>{{ Auth::user()->name }} 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="transaction.html">Transactions History</a>
+                                <a class="dropdown-item" href="{{route('users.orders')}}">Transactions History</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

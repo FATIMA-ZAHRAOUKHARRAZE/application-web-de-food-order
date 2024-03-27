@@ -28,7 +28,10 @@ Route::get('products/cart/{id}', [App\Http\Controllers\Products\ProductsControll
 //checkout and paying
 Route::post('products/prepare-checkout', [App\Http\Controllers\Products\ProductsController::class, 'prepareCheckout'])->name('products.prepare.checkout');
 Route::get('products/checkout', [App\Http\Controllers\Products\ProductsController::class, 'Checkout'])->name('products.checkout');
-Route::post('products/checkout', [App\Http\Controllers\Products\ProductsController::class, 'proccessCheckout'])->name('products.proccess.checkout');
-Route::get('products/pay', [App\Http\Controllers\Products\ProductsController::class, 'paywithPaypal'])->name('products.pay');
-Route::get('products/pay', [App\Http\Controllers\Products\ProductsController::class, 'paywithPaypal'])->name('products.pay');
-check.for.price
+Route::post('products/checkout', [App\Http\Controllers\Products\ProductsController::class, 'proccessCheckout'])->name('products.proccess.checkout')->middleware('check.for.price');
+Route::get('products/pay', [App\Http\Controllers\Products\ProductsController::class, 'paywithPaypal'])->name('products.pay')->middleware('check.for.price');
+Route::get('products/success', [App\Http\Controllers\Products\ProductsController::class, 'success'])->name('products.success')->middleware('check.for.price');
+
+//users pages
+Route::get('users/my-orders', [App\Http\Controllers\Users\UsersController::class, 'myOrders'])->name('users.orders');
+
