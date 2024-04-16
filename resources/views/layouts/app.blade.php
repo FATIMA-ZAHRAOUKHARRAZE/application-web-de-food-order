@@ -30,7 +30,7 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="{{ url('/home') }}" class="navbar-brand">
-                    <img src="{{asset('assets/img/logo/logo.png')}}" alt="">
+                    <img src="{{asset('assets/users_images/logo/logo.png')}}" alt="">
                 </a>
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,6 +41,12 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a href="{{route('products.shop')}}" class="nav-link">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('about')}}" class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('contact')}}" class="nav-link">Contact</a>
                         </li>
                         @guest
                         @if (Route::has('login'))
@@ -57,10 +63,11 @@
                         @else
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="avatar-header"><img src="{{asset('assets/img/logo/logo.png')}}"></div>{{ Auth::user()->name }} 
+                                <div class="avatar-header"><img src="{{asset('assets/users_images/'.Auth::user()->image)}}"></div>{{ Auth::user()->name }} 
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{route('users.orders')}}">Transactions History</a>
+                                <a class="dropdown-item" href="{{route('users.settings')}}">settings</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -75,7 +82,7 @@
                         @endguest
                         <li class="nav-item">
                             <a href="{{route('products.cart')}}" class="nav-link" data-toggle="" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-shopping-basket"></i> <span class="badge badge-primary"></span>
+                                <i class="fa fa-shopping-basket"></i> 
                             </a>
                           
                         </li>

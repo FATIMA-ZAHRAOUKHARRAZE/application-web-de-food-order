@@ -29,5 +29,13 @@ class HomeController extends Controller
         $categories = Category::select()->orderBy('id', 'desc')->get();
         return view('home', compact('categories'));
     }
+    public function about()
+    {
+        return view('pages.about');
+    }
+    public function contact()
+    {
+        return view('pages.contact');
+    }
     
 }

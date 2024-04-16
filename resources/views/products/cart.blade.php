@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('content')
 <div id="page-content" class="page-content">
     <div class="banner">
         <div class="jumbotron jumbotron-bg text-center rounded-0" style=" margin-top:-25px;background-image: url({{asset('assets/img/bg-header.jpg')}});">

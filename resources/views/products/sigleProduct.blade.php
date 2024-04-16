@@ -63,14 +63,16 @@
                     <input type="hidden" name="price" value="{{$product->price}} ">
                     <input type="hidden" name="image" value="{{$product->image}} ">
                     <input type="hidden" name="pro_id" value="{{$product->id}}">
-                    @if($ceckInCart >0)
-                        <button disabled class="mt-3 btn btn-primary btn-lg">
-                            <i class="fa fa-shopping-basket"></i> Add to Cart
-                        </button>
-                    @else
-                        <button type="submit" name="" class="mt-3 btn btn-primary btn-lg">
-                            <i class="fa fa-shopping-basket"></i> Add to Cart
-                        </button>
+                    @if(isset (auth::user()->id)) 
+                        @if($ceckInCart >0)
+                            <button disabled class="mt-3 btn btn-primary btn-lg">
+                                <i class="fa fa-shopping-basket"></i> Add to Cart
+                            </button>
+                        @else
+                            <button type="submit" name="" class="mt-3 btn btn-primary btn-lg">
+                                <i class="fa fa-shopping-basket"></i> Add to Cart
+                            </button>
+                        @endif
                     @endif
                     </form>
                 </div>

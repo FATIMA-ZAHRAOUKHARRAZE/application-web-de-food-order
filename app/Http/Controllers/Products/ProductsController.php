@@ -22,11 +22,17 @@ class ProductsController extends Controller
         return view('products.singleCategory',compact('products'));
     }
     public function singleProduct ($id)
-    {
-        $product=Product::find($id);
+    {$product=Product::find($id);
         $relatedProducts=Product::where('category_id',$product->category_id)->where('id','!=',$id)->get();
-        $ceckInCart=Cart::where('pro_id',$id)->where('user_id',Auth::user()->id)->count();
-        return view('products.sigleProduct',compact('product','relatedProducts','ceckInCart'));
+        if(isset (auth::user()->id)) {
+            
+            $ceckInCart=Cart::where('pro_id',$id)->where('user_id',Auth::user()->id)->count();
+            return view('products.sigleProduct',compact('product','relatedProducts','ceckInCart'));
+        }else {
+            return view('products.sigleProduct',compact('product','relatedProducts'));
+
+        }
+        
     }
     public function shop()
     {
