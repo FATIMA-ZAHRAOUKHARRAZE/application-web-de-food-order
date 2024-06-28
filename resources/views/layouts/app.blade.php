@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+  
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -21,6 +22,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="{{asset('assets/packages/thumbelina/thumbelina.css')}} ">
     <link rel="stylesheet" type="text/css" media="all" href="{{asset('assets/packages/bootstrap-touchspin/bootstrap-touchspin.css')}}">
     <link rel="stylesheet" type="text/css" media="all" href=" {{asset('assets/css/theme.css')}}">
+    
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -30,7 +32,7 @@
             <div class="container">
                 <!-- Navbar Brand -->
                 <a href="{{ url('/home') }}" class="navbar-brand">
-                    <img src="{{asset('assets/users_images/logo/logo.png')}}" alt="">
+                    <img src="{{asset('assets/img/logo/logo.png')}}" alt="">
                 </a>
                 <!-- Toggle Button -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
