@@ -7,10 +7,10 @@
         <div class="jumbotron jumbotron-bg text-center rounded-0" style=" margin-top:-25px;background-image: url({{asset('assets/img/bg-header.jpg')}});">
             <div class="container">
                 <h1 class="pt-5">
-                    About Us
+                    Food Order
                 </h1>
                 <p class="lead">
-                    Save time and leave the groceries to us.
+                    Fresh fruits & vegetables delivered to your door.
                 </p>
             </div>
         </div>
@@ -20,14 +20,14 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center mb-3">
-                    <h1 class="title text-uppercase mb-2">Freshcery</h1>
+                    <h1 class="title text-uppercase mb-2">Food Order</h1>
                     <h5>
-                        Groceries Organic Store
+                        Fruits & Vegetables
                     </h5>
                 </div>
                 <div class="col-md-10">
                     <p class="text-justify">
-                        Occaecat sunt id anim officia laborum incididunt dolore sit consequat consectetur enim fugiat aute culpa consequat cillum incididunt officia sed esse laborum anim aliqua et duis reprehenderit commodo do dolor dolor deserunt esse in aute anim adipisicing deserunt eu tempor veniam magna magna nulla in ea nulla elit est do veniam dolor pariatur in ut deserunt adipisicing est anim proident occaecat aliquip sunt enim occaecat cillum commodo in duis fugiat pariatur officia aliquip anim in dolore id id pariatur pariatur enim quis excepteur proident incididunt dolor consequat nisi et veniam occaecat sed exercitation dolore eiusmod elit sed voluptate adipisicing ut irure ad ut ex deserunt exercitation amet in eu quis ut occaecat non sunt labore reprehenderit elit commodo aute ea occaecat tempor dolor sed ut cillum aute et pariatur sit consequat commodo sunt sit amet nulla commodo aute laborum non ullamco ea laboris do adipisicing quis consequat adipisicing ea cupidatat et minim pariatur sed amet cillum commodo pariatur fugiat duis id amet ut exercitation voluptate culpa fugiat nostrud aute.
+                        We make it easy to order fresh fruits and vegetables from local farms. Choose your produce, place an order, and receive freshly harvested items delivered quickly to your home.
                     </p>
                 </div>
             </div>
@@ -41,13 +41,7 @@
                         Straight from the Farm
                     </h5>
                     <p>
-                        Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.
-                    </p>
-                    <p>
-                        Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.
-                    </p>
-                    <p>
-                        Our farm-to-table concept emphasizes on getting the fresh produce directly from local farms to your tables within one day, hence you know you get the freshest produce straight from harvest.
+                        We source fruits and vegetables directly from nearby farms and deliver them within 24 hours to guarantee peak freshness.
                     </p>
                 </div>
             </div>
@@ -58,13 +52,7 @@
                         Know Your Farmers
                     </h5>
                     <p>
-                        We want you to know exactly who is growing your food by having the farmers profile on each item and farmers page. You’re welcome to visit the farms and see the love they put into growing your food.
-                    </p>
-                    <p>
-                        We want you to know exactly who is growing your food by having the farmers profile on each item and farmers page. You’re welcome to visit the farms and see the love they put into growing your food.
-                    </p>
-                    <p>
-                        We want you to know exactly who is growing your food by having the farmers profile on each item and farmers page. You’re welcome to visit the farms and see the love they put into growing your food.
+                        Each product links to the farmer who grew it so you can learn where your food comes from and support local growers.
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -81,13 +69,7 @@
                         Improving Farmers’ Livelihood
                     </h5>
                     <p>
-                        Slowly but sure, by cutting the complex supply chain and food system, we hope to improve the welfare of farmers by giving them the returns they deserve for their hard work.
-                    </p>
-                    <p>
-                        Slowly but sure, by cutting the complex supply chain and food system, we hope to improve the welfare of farmers by giving them the returns they deserve for their hard work.
-                    </p>
-                    <p>
-                        Slowly but sure, by cutting the complex supply chain and food system, we hope to improve the welfare of farmers by giving them the returns they deserve for their hard work.
+                        By connecting customers directly with producers, we help farmers receive fair prices and build sustainable businesses.
                     </p>
                 </div>
             </div>

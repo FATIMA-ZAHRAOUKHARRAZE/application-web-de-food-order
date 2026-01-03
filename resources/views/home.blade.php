@@ -143,6 +143,55 @@
     </div>
     </section>
 
+    <!-- Trust sections: Testimonials, Security & Delivery, Our Farmers -->
+    <section id="trust" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2 class="title">What Our Customers Say</h2>
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <blockquote class="blockquote">
+                                <p class="mb-2">"The produce always arrives fresh and tastes amazing. I trust Food Order for our weekly groceries."</p>
+                                <footer class="blockquote-footer">Anna, regular customer</footer>
+                            </blockquote>
+                            <blockquote class="blockquote mt-3">
+                                <p class="mb-2">"Fast delivery and great communication — excellent service from farm to table."</p>
+                                <footer class="blockquote-footer">Marc, Lyon</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="title">Secure & Reliable</h2>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <h5>Secure Payments</h5>
+                                <p>We use trusted payment gateways and never store your card details.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-box">
+                                <h5>Fast Delivery</h5>
+                                <p>Same-day dispatch from local farms and next-day delivery in most areas.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <h5>Our Farmers</h5>
+                            <p>We partner with local growers who follow sustainable practices. Learn more on each product page.</p>
+                            <div class="d-flex gap-2">
+                                <img src="{{asset('assets/img/legume.jpg')}}" class="img-fluid rounded" style="width:80px;height:80px;object-fit:cover">
+                                <img src="{{asset('assets/img/legume.jpg')}}" class="img-fluid rounded" style="width:80px;height:80px;object-fit:cover">
+                                <img src="{{asset('assets/img/legume.jpg')}}" class="img-fluid rounded" style="width:80px;height:80px;object-fit:cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="categories" class="pb-0 gray-bg">
     <h2 class="title">Categories</h2>
     <div class="landing-categories owl-carousel">
